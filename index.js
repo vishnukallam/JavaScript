@@ -47,13 +47,33 @@
 // console.log(typeof age);
 
 
-let X = "summer time"
-let y = "summer time"
-let z = "summer time"
+// let X = "summer time"
+// let y = "summer time"
+// let z = "summer time"
 
-X = Boolean(X)
-y = Boolean(y)
-z = Boolean(z)
-console.log(X, typeof X)
-console.log(y, typeof y)
-console.log(z, typeof z)        
+// X = Boolean(X)
+// y = Boolean(y)
+// z = Boolean(z)
+// console.log(X, typeof X)
+// console.log(y, typeof y)
+// console.log(z, typeof z)        
+
+// Constant Variables
+// const pi = 3.14;
+// document.getElementById("submit").onclick = function(){
+//     radius = document.getElementById("text").value;
+//     let area = pi * radius * radius;
+//     document.getElementById("result").innerText   = `Area of circle is ${area}`;
+// }
+let count = 0;
+ 
+document.getElementById("submit").onclick = function(){
+    sum =  document.getElementById("text").value;
+    if (sum === ""){
+        count++;
+
+    }else if (sum !== ""){
+        count = count + Number(sum);
+    }
+    document.getElementById("result").innerText = count;
+}
