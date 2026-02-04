@@ -67,13 +67,24 @@
 // }
 let count = 0;
  
-document.getElementById("submit").onclick = function(){
+document.getElementById("inc").onclick = function(){
     sum =  document.getElementById("text").value;
     if (sum === ""){
         count++;
 
     }else if (sum !== ""){
         count = count + Number(sum);
+    }
+    document.getElementById("result").innerText = count;
+}
+document.getElementById("dec").onclick = function(){
+    sum =  document.getElementById("text").value;
+    if (sum === ""){
+        count--;
+        
+    }
+    else if (sum !== ""){
+        count = count - Number(sum);
     }
     document.getElementById("result").innerText = count;
 }
