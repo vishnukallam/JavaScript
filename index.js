@@ -65,6 +65,7 @@
 //     let area = pi * radius * radius;
 //     document.getElementById("result").innerText   = `Area of circle is ${area}`;
 // }
+/*
 let count = 0;
  
 document.getElementById("inc").onclick = function(){
@@ -87,4 +88,21 @@ document.getElementById("dec").onclick = function(){
         count = count - Number(sum);
     }
     document.getElementById("result").innerText = count;
+}
+document.getElementById("reset").onclick = function(){
+    sum = null;
+    count = 0;
+    document.getElementById("result").innerText = count;
+    document.getElementById("text").value = sum;
+}
+*/
+
+
+
+
+
+document.getElementById("inc").onclick = function(){
+    radius = document.getElementById("text").value;
+    let area = Math.PI * radius * radius;
+    document.getElementById("result").innerText   = `Area of circle is ${area}`;
 }
