@@ -111,8 +111,8 @@ document.getElementById("reset").onclick = function(){
 
 // Random number generation
 
-document.getElementById("button").onClick = function(){
-    randNum = Math.random()*100;
-    roll = Math.ceil(randNum);
-    document.getElementById("text").innerText = roll;
+document.getElementById("button").onclick = function() {
+    let randNum = Math.random() * 6;
+    let roll = Math.ceil(randNum);
+    document.getElementById("text").value = roll;
 }
