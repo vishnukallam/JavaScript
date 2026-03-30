@@ -101,8 +101,18 @@ document.getElementById("reset").onclick = function(){
 
 
 
-document.getElementById("inc").onclick = function(){
-    radius = document.getElementById("text").value;
-    let area = Math.PI * radius * radius;
-    document.getElementById("result").innerText   = `Area of circle is ${area}`;
+// document.getElementById("inc").onclick = function(){
+//     radius = document.getElementById("text").value;
+//     let area = Math.PI * radius * radius;
+//     document.getElementById("result").innerText   = `Area of circle is ${area}`;
+// }
+
+
+
+// Random number generation
+
+document.getElementById("button").onClick = function(){
+    randNum = Math.random()*100;
+    roll = Math.ceil(randNum);
+    document.getElementById("text").innerText = roll;
 }
