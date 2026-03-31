@@ -1,4 +1,4 @@
-body{
+/* body{
     font-family: Arial, Helvetica, sans-serif;
     background: #b5e4c1da;
     text-align: center;
@@ -62,4 +62,89 @@ body{
     color: white;
     font-weight: bold;
     cursor: pointer;
+} */
+
+
+
+
+:root {
+  --bg: #1a1a2e;
+  --card: #16213e;
+  --text: #eaeaea;
+  --accent: #e94560;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: radial-gradient(circle at top, #4e6ef2, #1a1a2e);
+  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  text-align: center;
+  padding: 2rem;
+  background: rgba(9, 11, 36, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  width: min(100%, 360px);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+.dice {
+  width: 140px;
+  height: 140px;
+  margin: 0 auto;
+  display: grid;
+  place-items: center;
+  font-size: 4rem;
+  background: linear-gradient(145deg, #2b2f60, #161a35);
+  border-radius: 28px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.35);
+}
+
+.dice:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 42px rgba(0, 0, 0, 0.45);
+}
+
+.dice.rolling {
+  animation: roll 0.5s ease;
+}
+
+@keyframes roll {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+
+#result {
+  margin-top: 1.25rem;
+  font-size: 1.1rem;
+  color: var(--text);
+}
+
+.rolled {
+  color: var(--accent);
 }

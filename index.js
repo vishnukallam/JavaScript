@@ -111,8 +111,33 @@ document.getElementById("reset").onclick = function(){
 
 // Random number generation
 
-document.getElementById("button").onclick = function() {
-    let randNum = Math.random() * 6;
-    let roll = Math.ceil(randNum);
-    document.getElementById("text").value = roll;
+// document.getElementById("button").onclick = function() {
+//     let randNum = Math.random() * 6;
+//     let roll = Math.ceil(randNum);
+//     document.getElementById("text").value = roll;
+// }
+
+
+const dice = document.getElementById('dice');
+const result = document.getElementById('result');
+
+function getDiceFace(value) {
+  const faces = ['⚀', '⚁', '⚂', '⚃', '⚄', '⚅'];
+  return faces[value - 1];
 }
+
+function rollDice() {
+  dice.classList.add('rolling');
+  result.textContent = 'Rolling...';
+  result.classList.remove('rolled');
+
+  setTimeout(() => {
+    const value = Math.ceil(Math.random() * 6);
+    dice.textContent = getDiceFace(value);
+    result.textContent = `You rolled a ${value}!`;
+    result.classList.add('rolled');
+    dice.classList.remove('rolling');
+  }, 220);
+}
+
+dice.addEventListener('click', rollDice);
